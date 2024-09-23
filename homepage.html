@@ -7,25 +7,35 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <h1>Welcome to SBL Smart Bots</h1>
-        <a href="order.html" class="btn">Order Bots</a>
-    </nav>
+    <div class="loader" id="loader"></div> <!-- Loader for animation -->
+    <div class="homepage-container hidden" id="homepage-container"> <!-- Hidden initially -->
+        <nav>
+            <h1>Welcome to SBL Smart Bots</h1>
+            <a href="order.html" class="btn">Order Bots</a>
+        </nav>
 
-    <section class="sliding-section">
-        <div class="sliding-screen" id="sliding-screen">
-            <!-- Admin uploaded content will be dynamically displayed here -->
+        <section class="sliding-section">
+            <div class="sliding-screen" id="sliding-screen">
+                <!-- Admin uploaded content will be dynamically displayed here -->
+            </div>
+        </section>
+
+        <div class="bot-list">
+            <h2>Available Trading Bots</h2>
+            <div id="bots">
+                <!-- List of bots will be dynamically populated -->
+            </div>
         </div>
-    </section>
 
-    <div class="bot-list">
-        <h2>Available Trading Bots</h2>
-        <div id="bots">
-            <!-- List of bots will be dynamically populated -->
+        <!-- Admin features: Hidden for regular users -->
+        <div id="admin-panel" class="hidden">
+            <h2>Admin Panel</h2>
+            <input type="file" id="image-upload" accept="image/*">
+            <textarea id="bot-description" placeholder="Write bot description..."></textarea>
+            <button id="post-content" class="btn">Post Content</button>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
-  </html>
-  
+</html>
